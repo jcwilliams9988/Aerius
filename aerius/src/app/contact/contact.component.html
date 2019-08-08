@@ -1,0 +1,79 @@
+<!--contact-->
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="col-md-12">
+                    <h2 class="ser-title">Schedule a Tour</h2>
+                    {{msg}}
+                    <hr class="botm-line">
+                </div>
+                <div class="contact-info">
+
+                    <div class="space"></div>
+
+                    <form action="send" method="post" role="form" class="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="datetime-local" name="date" class="form-control br-radius-zero" id="date"/>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-action">
+                            <button type="submit" class="btn btn-form">Send Message</button>
+                        </div>
+                    </form><br><br>
+
+                </div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <h3 class="ser-title">Admissions Director</h3>
+                <hr class="botm-line">
+                <h4>Cyndi Craft</h4>
+
+                <img src="../../assets/images/woman.jpg" alt=""  width="200" height="200"class="img-fluid"><h1 class="space"></h1>
+
+
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+
+                <div>
+                    <h2 class="ser-title">I'd <i  class="fa fa-heart stroke-transparent" aria-hidden="true"></i> to help</h2>
+                    <hr class="botm-line">
+                    <p>If you'd like to schedule a tour or have any questions regarding admissions just fill out the form and Cyndi will get back to you as soon as possible. </p>
+
+
+
+                    <dl class="list-inline">
+                        <dt><a href="tel:734-561-7003"><i class="fa fa-phone"></i></a></dt>
+                        <dd>(734)561-7003</dd>
+                        <dt><a href="mailto:CCraft@aeriushealth.com"><i class="fa fa-envelope"></i></a></dt>
+                        <dd>CCraft@aeriushealth.com</dd>
+                    </dl>
+                </div>
+                <h5 class="Thankyou">Thank you<br> for choosing<br>Aerius Health Center</h5>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--/ contact-->
