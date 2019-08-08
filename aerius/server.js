@@ -5,9 +5,16 @@ const nodemailer = require('nodemailer');
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+
+var http = require('http');
+var nStatic = require('node-static');
+var fileServer = new nStatic.Server('./dist/aerius/');
+
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/src/app/contact/contact.component.html');
+    res.sendFile(__dirname + '/dist/aerius/');
 });
+
 
 
 app.post('/send', (req, res) => {
@@ -53,15 +60,21 @@ app.post('/send', (req, res) => {
 
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
+        console.log('Error detected!');
         if (error) {
             return console.log(error);
         }
         console.log('Message sent: %s', info.messageId);
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-        res.sendFile(__dirname + '/src/app/contact/contact.component.html',{msg: 'Email has been sent'});
+        res.sendFile(__dirname + './dist/aerius/contact',{msg: 'Email has been sent'});
     });
 });
 
+app.get('*', function (req, res) {
+    //console.log(req.url);
+
+    fileServer.serve(req, res);
+});
 
 app.listen(3000, () => console.log('Server started...'));
